@@ -1,4 +1,4 @@
-$color: (main: #A0C1D7, sub: #3d405b, func: #e07a5f, reverse: #fcfcfc, line: #cdcdcd)
+$color: (main: #A0C1D7, sub: #3d405b, func: #52C1D7, reverse: #fcfcfc, line: #cdcdcd)
 $base: (bg: #eee, border: #bbb, preset: #555)
 $wapper-w: 870px
 $wapper-base: 235px
@@ -10,7 +10,6 @@ $wapper-func: $wapper-w - $wapper-base
   outline: none
 body, html
   margin: 0
-  background: map-get($base, bg)
   font-family: 'Ubuntu', '微軟正黑體', sans-serif
   letter-spacing: .65px
   font-size: 15px
@@ -32,7 +31,7 @@ h3
 .resume
   width: $wapper-w
   background: #fbfbfb
-  margin: 20px auto
+  margin: 0px auto
   border: 1px solid map-get($base, border)
   box-shadow: 0 0 20px -3px map-get($base, border)
   position: relative
@@ -65,6 +64,7 @@ h3
       margin: -30px -15px 45px -15px
       position: relative
       z-index: 2
+      height: 340px
       &::after
         content: ''
         position: absolute
@@ -79,6 +79,7 @@ h3
           width: 100%
           border-radius: 50%
       .info
+        margin-top: 120px
         text-align: center
         color: map-get($color, reverse)
         .name
@@ -115,6 +116,27 @@ h3
             bottom: 0
             left: 0
             transition-duration: .3s
+        .space
+          margin-left: 35px
+    .lang
+      margin-top: 30px
+      div
+        line-height: 24px
+        margin-left: 35px
+        span
+          position: relative
+          font-size: 12px
+          &::after
+            content: ''
+            position: absolute
+            background: map-get($color, func)
+            height: 1px
+            width: 0
+            bottom: 0
+            left: 0
+            transition-duration: .3s
+        small
+          font-size: 10px
     .follow
       .box
         text-align: center
@@ -250,43 +272,8 @@ h3
                 background: map-get($color, main)
                 box-shadow: 0 0 0 map-get($color, main)
                 border-radius: 5px
-                // transition-duration: .3s
+                transition-duration: .5s
                 // use jquery add css transition-duration
-      &-soft
-        ul
-          display: flex
-          text-align: center
-          li
-            position: relative
-            max-width: 25%
-            &:hover
-              svg .cbar
-                stroke: map-get($color, func)
-                stroke-width: 4px
-              span, small
-                transform: scale(1.2)
-            svg
-              width: 95%
-              fill: transparent
-              transform: rotate(-90deg)
-              circle
-                stroke-width: 1px
-                stroke: map-get($color, line)
-              .cbar
-                stroke-width: 3px
-                stroke: map-get($color, main)
-                stroke-linecap: round
-                // transition-duration: .3s
-                // use jquery add css transition-duration
-            .soft-info
-            span, small
-              position: absolute
-              display: block
-              width: 100%
-              top: 52%
-              transition-duration: .3s
-            span
-              top: 40%
     .interests
       &-items
         box-sizing: border-box
