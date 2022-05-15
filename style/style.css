@@ -262,6 +262,11 @@ h3 {
             width: calc(100% - 120px);
             position: relative;
             border-radius: 2px; }
+            .resume .func .skills-prog ul li .frameworks {
+              height: 2px;
+              width: calc(100% - 120px);
+              position: relative;
+              border-radius: 2px; }
             .resume .func .skills-prog ul li .skills-bar .bar {
               position: absolute;
               top: -1px;
